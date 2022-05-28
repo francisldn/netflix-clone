@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
@@ -6,6 +5,10 @@ import Banner from '../components/Banner'
 import requests from '../utils/requests'
 import {Movie} from '../typings'
 import Row from '../components/Row';
+import useAuth from '../hooks/useAuth';
+import { useRecoilValue } from 'recoil'
+import { modalState } from '../atom/modalAtom';
+import Modal from '../components/Modal';
 interface Props {
   netflixOriginals: Movie[];
   trendingNow: Movie[];
@@ -27,7 +30,11 @@ const Home = ({
   topRated,
   trendingNow,
 }: Props) => {
-  
+  const {loading} = useAuth()
+  const showModal = useRecoilValue(modalState)
+
+  if(loading) return null
+
   return (
     <div className="relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010511] lg:h-[140vh]">
       <Head>
@@ -48,7 +55,7 @@ const Home = ({
             <Row title="Documentaries" movies={documentaries}/>
           </section>
         </main>
-        {/* Modal */}
+        {showModal && <Modal />}
     </div>
   )
 }
