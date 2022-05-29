@@ -4,10 +4,12 @@
 This project aims to build the Netflix web user interface, primarily using Typescript, NextJS and TailwindCSS. Below is the screenshot of the landing page.
 
 [Code](https://github.com/francisldn/netflix-clone)
+</br>
 [Frontend](https://netflix-clone-francisldn.vercel.app/login)
 
-<img src="/netflix-screenshot.png" alt="netflix screenshot"/>
-# Next.js + Tailwind CSS Example
+![netflix screenshot](netflix-screenshot.png)
+
+## Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
