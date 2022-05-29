@@ -2,10 +2,11 @@ import {Movie} from '../typings';
 import {ChevronLeftIcon, ChevronRightIcon} from '@heroicons/react/outline';
 import Thumbnail from './Thumbnail';
 import {useRef, useState, useEffect} from 'react';
+import { DocumentData } from 'firebase/firestore';
 
 interface RowProps {
     title: string;
-    movies: Movie[];
+    movies: Movie[] | DocumentData[]
 }
 
 const Row = ({title, movies}:RowProps) => {
@@ -36,7 +37,7 @@ const Row = ({title, movies}:RowProps) => {
                onClick={() => handleClick("left")}/>
                     <div ref={rowRef} className={`flex items-center scrollbar-hide space-x-0.5 overflow-x-scroll md:space-x-2.5 md:p-2`}>
                         {movies.map((movie) => (
-                            <Thumbnail movie={movie}/>
+                            <Thumbnail key={movie.id} movie={movie}/>
                         ))}
                     </div>
                <ChevronRightIcon className="absolute top-0 bottom-0 right-2 z-40 m-auto h-9 w-9 cursor-pointer opacity-0 transition hover:scale-125 group-hover:opacity-100" 
