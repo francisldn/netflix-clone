@@ -7,7 +7,9 @@ This project aims to build the Netflix web user interface, primarily using Types
 </br>
 [Frontend](https://netflix-clone-francisldn.vercel.app/login)
 
-![netflix screenshot](netflix-screenshot.png)
+<img src="netflix-screenshot.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 
 ## Next.js + Tailwind CSS Example
 
