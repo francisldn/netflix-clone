@@ -1,6 +1,6 @@
 
 # Netflix-Clone 
-### Build with TypeScript, NextJS/React, TailwindCSS, integration with Firebase and Stripe
+### Built with TypeScript, NextJS/React, TailwindCSS, integration with Firebase and Stripe
 This project aims to build the Netflix web user interface, primarily using Typescript, NextJS and TailwindCSS. Below is the screenshot of the landing page.
 
 [Code](https://github.com/francisldn/netflix-clone)
