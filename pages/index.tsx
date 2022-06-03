@@ -14,7 +14,7 @@ import { getProducts, Product } from '@stripe/firestore-stripe-payments';
 import { payments } from '../lib/stripe'
 import useSubscription from '../hooks/useSubscription';
 import useList from '../hooks/useList'
-import { DocumentData } from 'firebase/firestore'
+
 interface Props {
   netflixOriginals: Movie[];
   trendingNow: Movie[];
@@ -44,7 +44,7 @@ const Home = ({
   const subscription = useSubscription(user)
   const movie = useRecoilValue(movieState)
   const list = useList(user?.uid)
- 
+
   if(loading || subscription === null ) return null
   if(!subscription) return <Plan products={products}/>
 
@@ -85,7 +85,7 @@ export const getServerSideProps = async() => {
     .then((res) => res)
     .catch((error) => console.log(error.message))
   // using Promise.all to resolve all fetch requests
-
+  
   const [
     netflixOriginals,
     trendingNow,
@@ -106,6 +106,7 @@ export const getServerSideProps = async() => {
     fetch(requests.fetchDocumentaries).then((res) => res.json()),
   ])
 
+  console.log(netflixOriginals.results)
   return {
     props: {
       netflixOriginals: netflixOriginals.results,

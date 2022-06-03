@@ -192,6 +192,5 @@ const Modal = () => {
 
 export default Modal;
 
-function modalMovie(modalMovie: any): [any, any] {
-    throw new Error('Function not implemented.');
-}
+
+

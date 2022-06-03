@@ -1,7 +1,7 @@
 import {Movie} from '../typings';
 import {ChevronLeftIcon, ChevronRightIcon} from '@heroicons/react/outline';
 import Thumbnail from './Thumbnail';
-import {useRef, useState, useEffect} from 'react';
+import {useRef, useState} from 'react';
 import { DocumentData } from 'firebase/firestore';
 
 interface RowProps {
