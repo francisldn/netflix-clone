@@ -11,6 +11,8 @@ This project aims to build the Netflix web user interface, primarily using Types
      alt="netflix screenshot"
      style="float:left; margin-right:10px;" />
 
+
+<img src="homepage.png" alt="homepage">
 ## Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
